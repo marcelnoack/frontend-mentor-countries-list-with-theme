@@ -1,0 +1,27 @@
+{
+  "name": "parcel-ts-babel-sass-basicsetup",
+  "version": "1.0.0",
+  "description": "Basic boilerplate setup using Parcel, Babel with SASS and TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "start": "npm run clean && parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "keywords": [
+    "parcel",
+    "babel",
+    "sass",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Marcel Noack",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3"
+  }
+}
