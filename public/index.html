@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parcel + TypeScript + Babel - Basic Setup</title>
-
-    <!-- Integrating SASS into the Project - Option 1: directly inside the html -->
-    <!-- <link rel="stylesheet" href="../src/scss/main.scss" /> -->
+    <title>Countries List</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="page-container">
+      <main id="content-wrap">
+        <header id="header"></header>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+    <!-- <script>
+      window.setTimeout(() => {
+        document.documentElement.classList.add("transition");
+        document.documentElement.setAttribute("data-theme", "dark");
+        window.setTimeout(() => {
+          document.documentElement.classList.remove("transition");
+        }, 1000)
+      }, 3000)
+    </script> -->
     <script src="../src/app.ts"></script>
   </body>
 </html>

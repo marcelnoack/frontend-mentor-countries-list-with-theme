@@ -1,7 +1,54 @@
-$primary-color: white;
-$bg-color: black;
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 
-.app {
-  color: $primary-color;
-  background-color: $bg-color;
+// Global variables
+$footer-height: 2.5rem;
+
+html {
+  // using css-variables to be able to reassign them depending on the current theme
+  --input-color: hsl(0, 0%, 52%);
+  --text-color: hsl(200, 15%, 8%);
+  --bg-color: hsl(0, 0%, 98%);
+  --elements-color: hsl(0, 0%, 100%);
+
+  &[data-theme='dark'] {
+    --elements-color: hsl(209, 23%, 22%);
+    --bg-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+  }
+
+  // css transition class to change theme smoothly
+  &.transition,
+  &.transition *,
+  &.transition *:before,
+  &.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+  }
+
+  font-family: 'Nunito sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Page Layout
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 300px;
+}
+
+#content-wrap {
+  padding-bottom: $footer-height;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  text-align: center;
 }
