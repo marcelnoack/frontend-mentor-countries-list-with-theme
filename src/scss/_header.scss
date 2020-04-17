@@ -1,0 +1,14 @@
+$default-padding: 2rem;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $default-padding;
+  background-color: var(--elements-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+  #mode:hover {
+    cursor: pointer;
+  }
+}

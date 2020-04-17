@@ -1,15 +1,23 @@
-// Integrating SASS into the Project - Option 2: as an ES6 import inside a JS/TS file
-// import './scss/main.scss';
+import './scss/main.scss';
+import Header, { initTheme, toggleTheme } from './components/Header';
+import Toolbar from './components/Toolbar';
 
-// const foo: string = 'Bar!';
+const App = async () => {
+  try {
+    document.getElementById('header').innerHTML = Header();
+    document.getElementById('toolbar')?.innerHTML = Toolbar();
+    initTheme();
+    loadEventListeners();
+  } catch (err) {
+    console.log('ERROR:', err);
+  }
+};
 
-// const app = document.getElementById('app');
-// if (app) {
-//   app.innerHTML = foo;
-//   app.classList.add('app');
-//   // document.documentElement.classList.add("transition");
-//   setTimeout(() => {
-//     console.log('dark now');
-//     document.documentElement.setAttribute('data-theme', 'dark');
-//   }, 1000);
-// }
+// Helper functions
+const loadEventListeners = () => {
+  document.querySelector('#mode')?.addEventListener('click', () => {
+    toggleTheme();
+  });
+};
+
+App();
