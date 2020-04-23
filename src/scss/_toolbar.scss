@@ -1,0 +1,53 @@
+#toolbar {
+  $input-padding: 0.75rem;
+  $vertical-padding: 0.5rem;
+  $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05);
+
+  .container {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(auto, 2);
+    row-gap: 3rem;
+
+    #search {
+      background-color: var(--elements-color);
+      padding: $vertical-padding 3rem;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: inherit;
+        color: inherit;
+        margin-left: 2rem;
+        padding: $input-padding;
+      }
+
+      input::placeholder {
+        color: inherit;
+      }
+    }
+
+    #filter {
+      background: var(--elements-color);
+      color: inherit;
+      width: 200px;
+      padding: $input-padding + $vertical-padding;
+
+      select {
+        border: none;
+        color: inherit;
+        background-color: inherit;
+        width: 100%;
+        // appearance: none;
+        // background-image: url('../images/chevron-down.svg');
+        // background-size: contain;
+        // background-repeat: no-repeat;
+        // background-position: right;
+      }
+    }
+  }
+}
